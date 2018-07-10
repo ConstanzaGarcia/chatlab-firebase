@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChatLab</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <h1>Chat Laboratoria</h1>
+    <div id="loginContainer">
+        <div id="loggedIn">
+            <p id="username"></p> <input type="button" value="LOG OUT">
+        </div>
+
+        <div id="loggedOut">
+            <input id="email" type="email">
+            <input id="password" type="password">
+            <input id="register" onclick="register()" type="button" value="REGISTER">
+            <input id="login" onclick="login()" type="button" value="LOGIN">
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBkicU1GH-ojAVybuPZVVgsRxy6er1V2u4",
+            authDomain: "chatlab-1b00e.firebaseapp.com",
+            databaseURL: "https://chatlab-1b00e.firebaseio.com",
+            projectId: "chatlab-1b00e",
+            storageBucket: "chatlab-1b00e.appspot.com",
+            messagingSenderId: "709889299394"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
